@@ -8,7 +8,7 @@ header {
     width: 80%;
 }
 
-.underscore, .right_guess, .wrong_guess {
+.underscore, .right, .wrong {
     border: 3px solid black;
     font-size: 100px;
     text-align: center;
@@ -18,7 +18,7 @@ header {
     width: 80%;
 }
 
-.right_guess, .wrong_guess {
+.right, .wrong {
     font-size: 40px;
     margin: 0 auto;
     margin-top: 2%; 

@@ -15,6 +15,7 @@ console.log(chosenWords);
 let docUnderScore = document.getElementsByClassName('underscore')
 let docRightGuess = document.getElementsByClassName('right_guess')
 let docWrongGuess = document.getElementsByClassName('wrong_guess')
+// let wins = document.getElementsByClassName('wins_score');
 
 //Create underscores based on length of words
 function generateUnderScore() {
@@ -38,9 +39,10 @@ document.addEventListener('keypress', function() {
         //replace underscore with right letters
         underScore[chosenWords.indexOf(pressedKeyLetter)] = pressedKeyLetter;
         docUnderScore[0].innerHTML = underScore.join(' ');
+        docRightGuess[0].innerHTML = rightLetters.join(' , ');
         console.log(underScore);
         if(underScore.join('') == chosenWords) {
-            alert('you won');
+
         }
 
 
