@@ -3,8 +3,8 @@ const words = ['red', 'blue', 'orange'];
 
 //Choose word randomly
 let randomNumber  = Math.floor(Math.random() * words.length);
-let wins = 0;
-let losses = 0;
+var wins = 0;
+var losses = 0;
 let rightLetters = [];
 let wrongLetters = [];
 let chosenWords = words[randomNumber];
@@ -15,6 +15,7 @@ console.log(chosenWords);
 let docUnderScore = document.getElementsByClassName('underscore')
 let docRightGuess = document.getElementsByClassName('right_guess')
 let docWrongGuess = document.getElementsByClassName('wrong_guess')
+
 // let wins = document.getElementsByClassName('wins_score');
 
 //Create underscores based on length of words
@@ -42,7 +43,7 @@ document.addEventListener('keypress', function() {
         docRightGuess[0].innerHTML = rightLetters.join(' , ');
         console.log(underScore);
         if(underScore.join('') == chosenWords) {
-
+            wins++;
         }
 
 
@@ -52,6 +53,11 @@ document.addEventListener('keypress', function() {
         console.log(wrongLetters);
     }
     
+
+    var html = 
+    "<p>wins: " + wins + "</p>"
+
+    document.querySelector(".wins_score").innerHTML = html;
 });
 
 docUnderScore[0].innerHTML = underScore.join(' ');
